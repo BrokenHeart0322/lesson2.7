@@ -1,0 +1,61 @@
+.header{
+    background-color: rgba(20, 20, 20, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10% ;
+    border-radius: 15px 15px 0 0;
+
+    &__logs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__img{
+            display: none;
+        }
+    }
+    
+    &__nav{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        a:hover{
+            color: rgba(216, 125, 74, 1);
+        }
+    }
+}
+
+@media screen and (max-width:885px) {
+    .header{
+        &__logs{
+            gap: 45px;
+
+            &__img{
+                display: block;
+            }
+        }
+        &__nav{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:430px) {
+    .header{
+        &__logs{
+            gap: 45px;
+
+            &__img{
+                display: block;
+            }
+        }
+        &__nav{
+            display: none;
+        }
+    }
+}

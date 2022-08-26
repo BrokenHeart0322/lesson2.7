@@ -1,0 +1,97 @@
+.hero{
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+
+    &__btn{
+        width: 80%; height: 1px;
+        border: none;
+        background-color: rgba(255, 255, 255, 1);
+        opacity: 0.2;
+    }
+
+    &__box{
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        align-items: center;
+
+        &__card{
+            width: 30%;
+            line-height: 45px;
+
+            h5{
+                color: grey;
+                opacity: 0.5;
+                letter-spacing: 9px;
+            }
+            h1{
+                color: whitesmoke;
+                font-size: 56px;
+            }
+            p{
+                color: grey;
+                line-height: 18px;
+                margin-bottom: 3rem;
+            }
+            a{
+                color: whitesmoke;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 14px;
+                background-color: rgba(216, 125, 74, 1);
+                padding: 15px 25px;
+            }
+            a:hover{
+                background-color: rgba(251, 175, 133, 1);
+            }
+        }
+    }
+    &__img{
+        width: 46%;
+    }
+}
+
+@media screen and (max-width:885px) {
+    .hero{
+        background-image: url("../../images/Bitmap.png");
+
+        &__img{
+            display: none;
+        }
+        &__box{
+            flex-direction: column;
+            margin: 10% 0 30% 0;
+
+            &__card{
+                width: 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width:430px) {
+    .hero{
+        background-image: url("../../images/Bitmap.png");
+        background-size: 150% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &__img{
+            display: none;
+        }
+        &__box{
+            flex-direction: column;
+            margin: 10% 0 30% 0;
+
+            &__card{
+                width: 90%;
+
+                h1{
+                   font-size: 42px;
+                }
+            }
+        }
+    }
+}

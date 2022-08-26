@@ -1,0 +1,53 @@
+.best{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 11rem auto;
+
+    &__card{
+        width: 40%;
+
+        h2{
+            font-size: 44px;
+            text-transform: uppercase;
+            line-height: 40px;
+
+            span{
+                color: rgba(216, 125, 74, 1);
+            }
+        }
+        p{
+            opacity: 0.6;
+        }
+    }
+}
+
+@media screen and (max-width:885px) {
+    .best{
+        width: 90%;
+        flex-direction: column-reverse;
+
+        &__card{
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width:430px) {
+    .best{
+        width: 90%;
+        flex-direction: column-reverse;
+
+        &__card{
+            width: 90%;
+
+            h2{
+                font-size: 28px;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+
