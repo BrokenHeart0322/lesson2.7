@@ -1,5 +1,5 @@
 .header{
-    background-color: rgba(20, 20, 20, 1);
+    background-color: rgba(19, 19, 19, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +10,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
 
+        &__drp-dwn{
+            display: none;
+            background-color: rgb(19, 19, 19);
+            padding: 0;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: whitesmoke;
+                }
+            }
+        }
+        
         &__img{
             display: none;
         }
@@ -33,11 +47,28 @@
 
 @media screen and (max-width:885px) {
     .header{
+
         &__logs{
             gap: 45px;
 
             &__img{
                 display: block;
+            }
+            &__img:active ~ &__drp-dwn{
+                display: block;
+                position: absolute;
+                text-align: start;
+                line-height: 300%;
+                padding: 10% 50% 10% 20%;
+                border-radius: 15%;
+                z-index: 1;
+                left: -18%;
+                top: -80%;
+
+                a:hover{
+                    background-color: rgba(216, 125, 74, 1);
+                    color: whitesmoke;
+                }
             }
         }
         &__nav{
@@ -53,6 +84,22 @@
             &__img{
                 display: block;
             }
+            &__img:active ~ &__drp-dwn{
+                display: block;
+                position: absolute;
+                text-align: start;
+                line-height: 300%;
+                padding: 10% 50% 10% 20%;
+                border-radius: 15%;
+                z-index: 1;
+                left: -18%;
+                top: -80%;
+
+                a:hover{
+                    background-color: rgba(216, 125, 74, 1);
+                    color: whitesmoke;
+                }
+            }           
         }
         &__nav{
             display: none;
