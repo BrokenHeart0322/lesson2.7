@@ -84,7 +84,7 @@
             &__img{
                 display: block;
             }
-            &__img:active ~ &__drp-dwn{
+            &__img:hover ~ &__drp-dwn{
                 display: block;
                 position: absolute;
                 text-align: start;
